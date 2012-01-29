@@ -1,13 +1,25 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File: .vimrc
-" Author: Stephen Hamer
+" Author: Stephen Hamer, Michael Woodworth
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible    " Use vim defaults
-filetype on         " Enable file type detection
+set nocp
+
+" Pathogen load
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
+
+"filetype on         " Enable file type detection
 filetype plugin on  " Load filetype plugin
 set history=50      " Have fifty lines of command-line history
 set mouse=a         " Have the mouse enabled all the time
@@ -148,7 +160,7 @@ autocmd FileType javascript set cindent shiftwidth=2 softtabstop=2 tabstop=8 exp
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class 
 autocmd FileType python set shiftwidth=4 softtabstop=4 textwidth=79 fo-=t
 autocmd FileType python set smarttab expandtab autoindent smartindent
-autocmd FileType python let ropevim_vim_completion=1
+"autocmd FileType python let ropevim_vim_completion=1
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 "autocmd FileType python set omnifunc=pysmell#Complete
 

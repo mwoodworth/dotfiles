@@ -1,10 +1,11 @@
-alias ls='ls --color=always'
+alias ls='ls -G'
 alias ll='ls -la'
 alias l='ls'
 alias u='cd ..'
 alias uu='cd ../..'
 alias uuu='cd ../../../'
 alias uuuu='cd ../../../..'
+alias gvim=mvim
 
 # list only directories
 function lsd { ls -l --file-type $* | grep /; }
