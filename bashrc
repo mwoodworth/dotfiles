@@ -41,3 +41,7 @@ if [ $(type -t __git_ps1) ]; then
 else
 	export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 fi
+
+export PATH="$PATH:/usr/local/nginx/sbin/:/Users/mwoodworth/bin/:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin/"
+
+export PYTHONPATH="/Users/mwoodworth/upverter/eda/:/Users/mwoodworth/upverter/eda/build/:/Users/mwoodworth/upverter/upconverter/schematic-file-converter/"

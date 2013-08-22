@@ -9,18 +9,11 @@
 set nocompatible    " Use vim defaults
 set nocp
 
-" Pathogen load
-filetype off
-
-call pathogen#infect()
-call pathogen#helptags()
-
 filetype plugin indent on
 syntax on
 
 
 "filetype on         " Enable file type detection
-filetype plugin on  " Load filetype plugin
 set history=50      " Have fifty lines of command-line history
 set mouse=a         " Have the mouse enabled all the time
 set fileformats="unix,dos,mac"
@@ -30,6 +23,7 @@ set printoptions=left:8pc,right:3pc  " printing options (pc = percent of page)
 "set nomodeline      " Don't let mode lines in files over ride this .vimrc
 set tagrelative     " Make paths in tag files relative to location of the tag file
 set title           " Set term titles
+set nospell
 
 command W w !sudo tee % > /dev/null
 
@@ -126,7 +120,8 @@ autocmd BufNewFile,BufRead COMMIT_EDITMSG set filetype=gitcommit
 
 " for both CSS and HTML, use genuine tab characters for indentation, to make
 " files a few bytes smaller
-autocmd FileType html,css set noexpandtab tabstop=8
+autocmd FileType html,css set noexpandtab tabstop=2
+autocmd FileType html set syn="html"
 
 " for CSS have things in braces indented
 autocmd FileType css set smartindent
@@ -216,3 +211,11 @@ nnoremap <C-y> <C-y><C-y><C-y>
 
 " Fuzzy Finder shortcut
 nnoremap <C-t> :<C-u>FufFile **/<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key Mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode_lint_checker = "pylint,pyflakes,mccabe"
+" let g:pymode_lint_ignore = "E501"
+

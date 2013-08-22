@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/mwoodworth/upverter/eda/.git'
+let g:netrw_dirhist_2='/Users/mwoodworth/upverter/eda/migrations'
+let g:netrw_dirhist_3='/Users/mwoodworth/upverter/gitolite-admin/conf'
+let g:netrw_dirhist_4='/Users/mwoodworth/upverter/upconverter/schematic-file-converter'
+let g:netrw_dirhist_5='/Users/mwoodworth/upverter/ops'
+let g:netrw_dirhist_6='/Users/mwoodworth/upverter/eda/scripts'
+let g:netrw_dirhist_7='/Users/mwoodworth/upverter/eda/community/templates/hackathons'
